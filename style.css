@@ -1,10 +1,10 @@
 body{
     margin: 0px; font-family: 'Segoe UI', sans-serif;
-    background-color: #ffff; color: #333
+    background-color: #FFF; color: #333
 
 }
 .menu-principal {
-    background-color: #1E3C72; padding: 15px 0;
+    background: linear-gradient(#1E3C72, lightblue, black ); padding: 15px 0;
     position:sticky; top: 0; z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
@@ -25,7 +25,7 @@ body{
     margin: 0; padding: 0;
 }
 .lista a {
-    color: rgb(198, 235, 237); text-decoration: none; font-size: 0.9rem;
+    color: rgb(1, 20, 102); text-decoration: none; font-size: 0.9rem;
     font-weight: 500; transition: color 0.3s;
 
 }

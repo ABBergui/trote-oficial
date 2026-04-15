@@ -3,6 +3,7 @@
         <head>
             <title>Cronograma - Trote 2026</title>
             <link rel="stylesheet" href="style.css">
+            <script src="scripts.js"></script>
             <meta charset="UTF-8">
         </head>
         <body>
@@ -23,7 +24,7 @@
             </nav>
             
             <main class="principal">
-               <section>
+               <section class="secao">
                     <h3>🧮 Simulador de Pontos - Itens Avulsos</h3>
                     <div>
                         <div class="form-group">
@@ -37,13 +38,40 @@
                             <label>Feijão (2kg)</label>
                             <input type="number" value="0" min="0" id="qtdeFeijao"/>
                         </div>
-                         <!-- quando o botão for clicado, será chamado a função calcular no JavaScript -->
-                            <button onclick="calcular()"> Calcular Total </button>
-                            <div id="result" class="resultado">
-                                Pontuação Total: 0 pontos
-                            </div>
+                        <div class="form-group">
+                            <label>Macarrão (500g)</label>
+                            <input type="number" value="0" min="0" id="qtdeMacarrao"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Óleo (1L)</label>
+                            <input type="number" value="0" min="0" id="qtdeOleo"/>
+                        </div>
                     </div>
                </section>
+                <section class="secao">
+                    <h3> Simulador de Pontos - Kit Alimentação </h3>
+                        <div>
+                            <div class="form-group">
+                            <label> Escolha a cor do time </label>
+                            <select id="cor">
+                            <option value="verde"> Verde </option>
+                            <option value="vermelho"> Vermelho </option>
+                            <option value="laranja"> Laranja </option>
+                            </select>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label> Kits de Alimentação</label>
+                        <input type="number" value="0" min="0" id="qtdeKits"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- quando o botão for clicado, será chamado a função calcular no JavaScript -->
+        <button onclick="calcular()"> Calcular Total </button>
+        <div id="result" class="resultado">
+                    Pontuação Total: 0 pontos
+        </div>
             </main>
             <footer>
                 <div>
@@ -51,17 +79,5 @@
                     <p>Uni-Facef - Centro Universitário Municipal de Franca</p>
                 </div>
             </footer>
-
-            <script>
-                function calcular(){
-                // recupera a quantidade de arroz
-                let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
-                let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
-                // calcula a pontuação total
-                let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8)
-                // mostramos a pontuação total ao usuário
-                document.getElementById("result").innerText = "Pontuação: " + pontos
-            }
-            </script>
         </body>
     </html>
