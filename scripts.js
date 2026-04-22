@@ -36,6 +36,26 @@ function calcular(){
     else {
         pontos = pontos + (qtdeKits) * (5000 / metaKit)
     }
+    //define a meta de suplementos 
+    let metaSuplementos
+    if (metaKit % 2 == 0){
+        metaSuplementos = metaKit / 2
+    }
+    else {
+        metaSuplementos = (metaKit / 2) + 1
+    }
+    let qtdeSuplementos = Number(document.getElementById("qtdeSuplementos").value)
+    if (qtdeSuplementos >= metaSuplementos){
+        pontos = pontos + 5000
+        if (qtdeSuplementos > metaSuplementos){
+            pontos = pontos + (qtdeSuplementos - metaSuplementos) * (5000 / metaSuplementos)
+        }
+    }
+    else {
+        pontos = pontos + (qtdeSuplementos) * (5000 / metaSuplementos)
+    }
+    let metaLeite = metaKit
+    let metaSangue = metaSuplementos
 
     // mostramos a pontuação total ao usuário
     document.getElementById("result").innerText = "Pontuação: " + pontos.toFixed(2)
